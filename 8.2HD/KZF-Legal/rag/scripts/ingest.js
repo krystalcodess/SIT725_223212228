@@ -17,6 +17,7 @@ async function run() {
 
   await Promise.resolve(vectorStore.save());
   console.log(`Ingested ${result.files} files and ${result.chunks} chunks.`);
+  process.exit(0);
 }
 
 run().catch((error) => {
