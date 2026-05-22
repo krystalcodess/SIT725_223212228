@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment 
+.env
+
+# RAG generated data
+rag/data/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+
+# Oversized files
+tests/server/fixtures/*
+
+# Server uploads (should be empty in repo)
+server/uploads/
