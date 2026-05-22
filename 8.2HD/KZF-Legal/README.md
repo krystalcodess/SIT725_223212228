@@ -43,7 +43,7 @@ No local MongoDB installation is required.
 docker compose up --build
 ```
 
-Wait until the app logs show the server running on port 3000. On first boot, RAG corpus pre-seeding runs before the server starts (you may see `Ingested 4 files and 153 chunks.` first). This usually takes 30–90 seconds depending on your machine and API response times.
+Wait until the app logs show the server running on port 3000. On each build, RAG corpus pre-seeding runs before the server starts (you may see Ingested 4 files and 153 chunks. first). This usually takes 30–50 seconds depending on your machine and API response times.
 
 ### 3. Access the application
 
@@ -100,7 +100,6 @@ docker compose down -v
 
 ### Troubleshooting
 
-- **Server slow to start:** RAG corpus pre-seeding runs on first boot. Wait for `Server running on port 3000` in the logs before opening the app.
 - **App exits on startup:** ensure `JWT_SECRET` in `.env` is at least 32 characters.
 - **Chat or upload fails:** confirm API keys from OnTrack are in `.env`, then run `docker compose up --build` again.
 - **Port already in use:** stop any process on port 3000, or change the host mapping in `docker-compose.yml` (e.g. `"3001:3000"`).
